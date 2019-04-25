@@ -1,0 +1,31 @@
+{
+  "cloud": true,
+  "pages": [
+    "pages/index/index",
+    "pages/about/about",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "美甲",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "list": [{
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "./images/首页.png",
+        "selectedIconPath": "./images/首页 (1).png"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "text": "关于我们",
+        "iconPath": "./images/关于我们.png",
+        "selectedIconPath": "./images/关于我们 (1).png"
+      }
+    ]
+  }
+}

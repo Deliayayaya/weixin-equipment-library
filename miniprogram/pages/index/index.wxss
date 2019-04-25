@@ -1,0 +1,35 @@
+/**index.wxss**/
+.container view{
+  width:100%;
+
+}
+.section{
+width:100%;
+display:inline-block;
+
+}
+scroll-view{
+    width:100%;
+    white-space:nowrap;
+}
+.section view{
+    display:inline-block;
+    height:300rpx;
+    width:100%;
+}
+.scroll-item{
+   width:100%;
+  height:300rpx;
+
+}
+
+.a{
+  background:yellow;
+
+}
+.b{
+  background: silver;
+}
+.c{
+  background: pink;
+}
