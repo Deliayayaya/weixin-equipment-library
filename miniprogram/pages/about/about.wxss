@@ -1,9 +1,0 @@
-/* miniprogram/pages/about/about.wxss */
-.about{
-  width:100%;
-
-}
-.time-picker{
-    width:100%;
-    background:pink;
-}

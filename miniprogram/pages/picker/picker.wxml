@@ -1,0 +1,30 @@
+<view>
+    <view>
+        <text>多个selector组件</text>
+        <view class="time-picker" wx:key="*this" wx:for="{{pickerData}}" wx:for-item="each" wx:for-index="index">
+            <picker  data-mark="{{index}}" mode="selector" bindchange="selectChange" value="{{each.index}}" range="{{each.value}}">
+                <view>{{each.name}}:</view>
+            </picker>
+            <view>{{each.value[each.index]}}</view>
+        </view>
+    </view>
+    <view>
+        <text>选择时间组件</text>
+        <view class="time-picker">
+            <picker style="width:100%;height:50rpx" mode="time" bindchange="timeChange" value="{{time}}" start="09:00" end="12:00">
+             <view>选择时间:</view>
+            </picker>
+            <view>{{time}}</view>
+        </view>
+    </view>
+    <view>
+        <text>选择日期组件</text>
+        <view class="time-picker">
+            <picker style="width:100%;height:50rpx" mode="date" bindchange="dateChange" value="{{selectDate}}" start="2019.1.1" end="2019.4.23">
+             <view>选择日期:</view>
+            </picker>
+            <view>{{selectDate}}</view>
+        </view>
+    </view>
+
+</view>

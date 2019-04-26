@@ -1,0 +1,5 @@
+<!--pages/percent/percent.wxml-->
+<view>
+    <progress percent="{{percent}}" show-info="true" active>
+    </progress>
+</view>

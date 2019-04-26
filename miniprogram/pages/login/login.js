@@ -5,18 +5,22 @@ Page({
    * 页面的初始数据
    */
   data: {
-    msg: 0,
-    selectData: [{}],
-    time: '09:00',
-    selectDate: '2019.4.23',
-    pickerData: [{ index: 0, value: ['11', '22', '33'], name: "选项一" }, { index: 0, value: ['111', '222', '333'], name: "选项二" }, { index: 0, value: ['1111', '2222', '3333'], name: "选项三" }],
-    selectData: ['111', '222', '333'],
-    selectData2: ['11', '22', '33'],
-    index: 0,
-    index2: 0,
+    isSubmit: true
 
   },
-
+  checkboxChange(e) { //checkbox是否同意协议
+    console.log("是否选中checkbox", e);
+    console.log("ssss", this.data.isSubmit)
+    this.setData({
+      isSubmit: !this.data.isSubmit
+    })
+  },
+  bindSubmit(e) { //from submit提交事件
+    console.log("submit", e.detail.value);
+  },
+  bindReset(e) { //重置表单
+    console.log("reset", e);
+  },
   /**
    * 生命周期函数--监听页面加载
    */

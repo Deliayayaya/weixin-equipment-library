@@ -1,57 +1,8 @@
-<!--index.wxml-->
 <view>
-    <!-- <view class="section">
-        <scroll-view   scroll-x="true">
-            <view class="a scroll-item">a</view>
-            <view class="b scroll-item">b</view>
-            <view class="c scroll-item">c</view>
-        </scroll-view>
-    </view>
-    <view>
-        <switch bindchange="switchChange">
-        </switch>
-    </view>
-    <view>
-        <block wx:for="{{icon_type}}">
-            <icon type="{{item}}"/>
-        </block>
-    </view> -->
-    <view>
-    <swiper indicator-dots="true" indicator-active-color="silver" autoplay="true" interval="2000" easing-function="easeInOutCubic" bindchange="bindSwiper">
-        <block wx:for="{{imgUrls}}" wx:key="*this">
-           <swiper-item >
-              <image src="{{item}}"/>
-           </swiper-item>
-        </block>
-    </swiper>
-    </view>
-    <view>
-        <progress percent="{{percent}}" show-info="true" active>
-        </progress>
-    </view>
-     <view>
-        <form bindsubmit="bindSubmit" bindreset="bindReset" report-submit="true">
-          <view class="section">
-            <label for="username">用户名:</label>
-            <input id="username" type='text' name="username"></input>
-          </view>
-          <view class="section">
-            <label for="password">密码:</label>
-            <input id="password" type='password' name="password"></input>
-          </view>
-          <view class="section">
-               <checkbox-group  bindchange="checkboxChange">
-                    <label for="checkHttp">
-                      <checkbox id="checkHttp" value="checkboxtap">是否同意该协议</checkbox>
-                    </label>
-              </checkbox-group>
-          </view>
-          <view style="width:100%;">
-            <button size="mini" type="primary" form-type="submit" disabled="{{isSubmit}}">确定</button>
-            <button size="mini" type="primary" form-type="reset">重置</button>
-          </view>
-        </form>
-    </view>
+   <button size="mini" data-gid="login" bindtap="navigateTo">login page</button>
+   <button size="mini" data-gid="swiper" bindtap="navigateTo">swiper component</button>
+   <button size="mini" data-gid="picker" bindtap="navigateTo">picker component</button>
+   <button size="mini" data-gid="percent" bindtap="navigateTo">percent component</button>
 </view>
 
 

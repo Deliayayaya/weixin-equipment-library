@@ -1,0 +1,24 @@
+<!--pages/login/login.wxml-->
+<view>
+    <form bindsubmit="bindSubmit" bindreset="bindReset" report-submit="true">
+      <view class="section">
+        <label for="username">用户名:</label>
+        <input id="username" type='text' name="username"></input>
+      </view>
+      <view class="section">
+        <label for="password">密码:</label>
+        <input id="password" type='password' name="password"></input>
+      </view>
+      <view class="section">
+           <checkbox-group  bindchange="checkboxChange">
+                <label for="checkHttp">
+                  <checkbox id="checkHttp" value="checkboxtap">是否同意该协议</checkbox>
+                </label>
+          </checkbox-group>
+      </view>
+      <view style="width:100%;">
+        <button size="mini" type="primary" form-type="submit" disabled="{{isSubmit}}">确定</button>
+        <button size="mini" type="primary" form-type="reset">重置</button>
+      </view>
+    </form>
+</view>
