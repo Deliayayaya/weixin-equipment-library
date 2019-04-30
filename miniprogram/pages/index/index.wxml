@@ -3,6 +3,7 @@
    <button size="mini" data-gid="swiper" bindtap="navigateTo">swiper component</button>
    <button size="mini" data-gid="picker" bindtap="navigateTo">picker component</button>
    <button size="mini" data-gid="percent" bindtap="navigateTo">percent component</button>
+   <button size="mini" data-gid="media" bindtap="navigateTo">多媒体</button>
 </view>
 
 

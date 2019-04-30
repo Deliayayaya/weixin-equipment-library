@@ -6,7 +6,8 @@
     "pages/logs/logs",
     "pages/picker/picker",
     "pages/swiper/swiper",
-    "pages/percent/percent"
+    "pages/percent/percent",
+    "pages/multiMedia/multi-media"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",

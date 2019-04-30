@@ -1,0 +1,25 @@
+/* pages/duomeiti/audio.wxss */
+.titleLi{
+    color:blue
+}
+/*视频样式*/
+#myVideo{
+    width:100%;
+}
+.danmu_box{
+    display:flex;
+}
+.danmu_box input{
+    flex:1
+}
+.send_danmu{
+    width:155rpx;
+}
+.total-button{
+    display:flex;
+    justify-content:center;
+
+}
+.map-button{
+
+}

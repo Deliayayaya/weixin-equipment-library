@@ -19,6 +19,20 @@ Page({
       case 'percent':
         wx.navigateTo({ url: '../percent/percent' });
         break;
+      case 'media':
+        wx.navigateTo({ url: '../multiMedia/multi-media' });
+        break;
+      default:
+        wx.navigateTo({
+          url: 'https://www.baidu.com',
+          success(res) {
+            console.log("res成功", res)
+          },
+          fail(res) {
+            console.log("res失败", res)
+          }
+        })
+        break;
     }
   },
   onLoad: function() {

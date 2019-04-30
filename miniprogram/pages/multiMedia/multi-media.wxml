@@ -1,0 +1,30 @@
+<!--pages/duomeiti/audio.wxml-->
+<view>
+    <view>
+        <text class="titleLi">音频:</text>
+        <audio class="audio" id="myAudio" loop="true" controls="true" poster="{{audioPoster}}" src="{{audioSrc}}" name="此时此刻" author="许巍" bindplay="audioplay" bindpause="audiopause"></audio>
+        <view>
+            <view>设置进度:</view>
+           <slider block-size="12" bindchange="sliderchange" value="{{playing_progress}}"/>
+        </view>
+    </view>
+    <view>
+        <text class="titleLi">视频:</text>
+        <view>
+            <video id="myVideo" src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400" controls="true"   danmu-list="{{danmuList}}" bindtimeupdate="bindtimeupdate" danmu-btn enable-danmu ></video>
+            <view class="danmu_box">
+                <input type="text" bindinput="writeDanmu" placeholder="请输入弹幕"></input>
+                <button class="send_danmu" type="primary" size="mini" bindtap="sendDanmu">发送</button>
+            </view>
+        </view>
+    </view>
+    <view class="main">
+    <text class="titleLi">地图:</text>
+      <map show-location="true" id="myMap"  class="map-container" markers="{{markers}}" polygons="{{polygons}}" scale="{{scale}}" bindmarkertap="markertap"  style='width:100%;height:{{Height}}px;'></map>
+      <cover-view class="total-button">
+          <button  type="primary" class="map-button" bindtap="chooseLocation">添加位置</button>
+          <button  type="primary" class="map-button" bindtap="delToLocation">清除位置</button>
+          <button  type="primary" class="map-button" bindtap="makeMap">连接位置</button>
+      </cover-view>
+    </view>
+</view>
