@@ -1,5 +1,6 @@
 // pages/duomeiti/audio.js
 const app = getApp();
+var util = require('../common/common.js');
 var dmContent = '';
 Page({
 
@@ -66,19 +67,15 @@ Page({
           markers: that.options.markers,
         });
         app.markers = that.options.markers;
-        // this.mapCtx
       },
     })
   },
   delToLocation: function() { //删除地点
+    var that = this;
     var markers = this.options.markers;
     if (markers !== undefined && markers.length != 0) {
       if (this.options.selectedMarker == undefined || this.options.selectedMarker.length == 0) {
-        wx.showToast({
-          title: '请点击要删除的位置!',
-          icon: 'none',
-          duration: 2000
-        })
+        util.showToast({ title: '请点击要删除的位置!', icon: 'none', });
       }
       for (let i = 0; i < markers.length; i++) {
         if (markers[i].name == this.options.selectedMarker) {
@@ -89,12 +86,7 @@ Page({
         markers: this.options.markers,
       })
     } else {
-      // console.log("tips")
-      wx.showToast({
-        title: '请先选择位置!',
-        icon: 'none',
-        duration: 2000
-      })
+      util.showToast({ title: '请先选择位置', icon: 'none', })
     }
   },
   makeMap: function() {
@@ -104,7 +96,7 @@ Page({
       this.setData({
         polygons: []
       })
-      wx.showToast({
+      util.showToast({
         title: '请选择位置!',
         icon: 'none',
         duration: 2000
