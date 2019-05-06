@@ -1,6 +1,6 @@
 //index.js
 const app = getApp() //获取全局唯一的小程序实例
-var ComJS = require('../common/common.js');
+var util = require('../common/common.js');
 Page({
   data: {},
   navigateTo(e) {
@@ -59,5 +59,12 @@ Page({
       }
     })
   },
+  onPullDownRefresh() { //下拉刷新
+    util.showToast({ title: '加载中...', icon: 'loading', duration: 1000 });
+    setTimeout(function() {
+      wx.hideToast();
+    }, 1000);
+    wx.stopPullDownRefresh();
+  }
 
 })

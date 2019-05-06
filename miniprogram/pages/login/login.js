@@ -63,8 +63,9 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function() {
-    console.log('开启下来状态');
+    console.log('下拉状态');
     this.setData({ msg: '....' });
+
   },
 
   /**
