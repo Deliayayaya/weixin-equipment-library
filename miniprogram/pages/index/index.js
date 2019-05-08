@@ -59,6 +59,21 @@ Page({
       }
     })
   },
+  onReady: function() {
+    wx.getStorage({
+      key: 'info',
+      success(res) {
+        console.log("rrrrr", res)
+      }
+    })
+    console.log("about页面初次渲染完成");
+  },
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function() {
+
+  },
   onPullDownRefresh() { //下拉刷新
     util.showToast({ title: '加载中...', icon: 'loading', duration: 1000 });
     setTimeout(function() {

@@ -1,6 +1,6 @@
 //app.js
 App({
-  name: '美甲商城',
+  name: 'apiTest',
   onLaunch: function(res) {
     console.log("小程序初始化", res);
     if (!wx.cloud) {

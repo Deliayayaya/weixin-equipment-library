@@ -5,7 +5,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    isSubmit: true
+    isSubmit: true,
+    userName: '',
+    password: ''
 
   },
   checkboxChange(e) { //checkbox是否同意协议
@@ -15,8 +17,25 @@ Page({
       isSubmit: !this.data.isSubmit
     })
   },
+  inputUser(e) {
+    this.setData({
+      userName: e.detail.value
+    })
+  },
+  inputPassword(e) {
+    console.log("eee", e);
+    this.setData({
+      password: e.detail.value
+    })
+  },
   bindSubmit(e) { //from submit提交事件
-    console.log("submit", e.detail.value);
+    wx.setStorage({
+      key: 'info',
+      data: { username: this.data.userName, password: this.data.password },
+      success(res) {
+        wx.navigateTo({ url: '../index/index' });
+      }
+    })
   },
   bindReset(e) { //重置表单
     console.log("reset", e);
