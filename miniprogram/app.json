@@ -1,21 +1,22 @@
 {
   "cloud": true,
   "pages": [
-    "pages/login/login",
     "pages/index/index",
+    "pages/login/login",
     "pages/logs/logs",
     "pages/picker/picker",
     "pages/swiper/swiper",
     "pages/percent/percent",
-    "pages/multiMedia/multi-media"
+    "pages/multiMedia/multi-media",
+    "pages/device/device"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarBackgroundColor": "#3982FF",
     "navigationBarTitleText": "我的小程序装备库",
-    "navigationBarTextStyle": "black",
+    "navigationBarTextStyle": "white",
     "enablePullDownRefresh": true
-  }
-
+  },
+  "sitemapLocation": "sitemap.json"
 }

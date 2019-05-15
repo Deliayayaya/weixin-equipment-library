@@ -1,0 +1,22 @@
+<!--pages/device/device.wxml-->
+<view>
+    <view class="row">
+        <view class="info">设备品牌:{{info.brand}}</view>
+        <view class="info">设备型号:{{info.model}}</view>
+        <view class="info">语言:{{info.language}}</view>
+        <view class="info">微信版本号:{{info.version}}</view>
+        <view class="info">操作系统及版本:{{info.system}}</view>
+        <view class="info">客户端平台:{{info.platform}}</view>
+        <button type="primary" bindtap="getInfo" plain>获取用户信息</button>
+    </view>
+    <view class="row">
+        <view class="info">网络状态:{{netType}}</view>
+        <button type="primary" bindtap="getNet" plain>获取网络信息</button>
+    </view>
+    <view class="row">
+        <view class="info">加速计x:{{x}}</view>
+        <view class="info">加速计y:{{y}}</view>
+        <view class="info">加速计z:{{z}}</view>
+        <button type="primary" bindtap="jiasuji" plain>获取加速计</button>
+    </view>
+</view>

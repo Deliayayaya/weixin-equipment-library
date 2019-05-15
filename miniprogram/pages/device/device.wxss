@@ -1,0 +1,8 @@
+/* pages/device/device.wxss */
+.row{
+    padding:20rpx 0;
+}
+.info{
+    border-bottom:1rpx solid #cccccc;
+    padding:12rpx 10rpx;
+}

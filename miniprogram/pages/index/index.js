@@ -22,6 +22,9 @@ Page({
       case 'media':
         wx.navigateTo({ url: '../multiMedia/multi-media' });
         break;
+      case 'device':
+        wx.navigateTo({ url: '../device/device' });
+        break;
       default:
         wx.navigateTo({
           url: 'https://www.baidu.com',
