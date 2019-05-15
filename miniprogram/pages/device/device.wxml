@@ -19,4 +19,12 @@
         <view class="info">加速计z:{{z}}</view>
         <button type="primary" bindtap="jiasuji" plain>获取加速计</button>
     </view>
+    <view class="row">
+        <view class="info">罗盘:{{compass}}</view>
+        <button type="primary" bindtap="luopan" plain>罗盘</button>
+    </view>
+    <view class="row">
+        <view class="info">罗盘:{{compass}}</view>
+        <button type="primary" bindtap="luopan" plain>罗盘</button>
+    </view>
 </view>

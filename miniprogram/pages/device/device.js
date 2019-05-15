@@ -15,9 +15,10 @@ Page({
       platform: '' // 客户端平台
     },
     netType: '',
-    x: '',
+    x: '上传预览后在手机端查看',
     y: '',
     z: '',
+    compass:'用手机测试'
 
   },
   getInfo() { //获取用户信息
@@ -51,9 +52,30 @@ Page({
   },
   jiasuji() {
     var self = this;
+    wx.onAccelerometerChange(function(res){
+      console.log("jiasuji",res);
+      this.setData({
+        x:res.x,
+        y:res.y,
+        z:res.z
+      })
+
+    }.bind(this));
+   
 
   },
-  onLanch: function() {},
+  luopan(){
+    wx.onCompassChange(function(res){
+      console.log("compass",res.direction,res.accuracy);
+      this.setData({
+        compass:res.direction
+      })
+    }.bind(this));
+  },
+  onLanch: function() {
+
+    
+  },
   /**
    * 生命周期函数--监听页面加载
    */
