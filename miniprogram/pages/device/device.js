@@ -18,6 +18,12 @@ Page({
     x: '',
     y: '',
     z: '',
+    phoneNumber: '',
+    scanResult: '',
+    scanType: '',
+    scanCharset: '',
+    scanPath: '',
+    content: '今天是5月16日,我又一次看视频看的犯困........我又一次看视频看的犯困........我又一次看视频看的犯困........我又一次看视频看的犯困........我又一次看视频看的犯困........'
 
   },
   getInfo() { //获取用户信息
@@ -51,6 +57,59 @@ Page({
   },
   jiasuji() {
     var self = this;
+
+  },
+  inputNumber(e) { //输入电话号码
+    console.log("number", e);
+    this.setData({
+      phoneNumber: e.detail.value
+    })
+
+
+  },
+  callNumber() { //拨打电话
+    if (this.data.phoneNumber) {
+      wx.makePhoneCall({
+        phoneNumber: this.data.phoneNumber,
+        success(e) {
+          console.log("拨打成功")
+        }
+      })
+    } else {
+      console.log("请输入要拨打的电话号码");
+      wx.showToast({
+        title: '请输入电话号码!',
+        icon: 'none'
+      })
+    }
+  },
+  scanCode() {
+    var self = this;
+    console.log("self", self)
+    wx.scanCode({
+      success(res) {
+        console.log("扫码成功", res);
+        self.setData({
+          scanResult: res.result,
+          scanType: res.scanType,
+          scanCharset: res.charSet,
+          scanPath: res.path
+        })
+      }
+    })
+  },
+  copyContent() { //复制粘贴板内容
+    wx.setClipboardData({
+      data: this.data.content,
+      success: function(res) {
+        console.log("设置粘贴板内容", res);
+        wx.getClipboardData({
+          success: function(res) {
+            console.log("获取粘贴板内容", res.data);
+          }
+        })
+      }
+    })
 
   },
   onLanch: function() {},

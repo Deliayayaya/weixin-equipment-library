@@ -1,5 +1,6 @@
 <!--pages/duomeiti/audio.wxml-->
 <view>
+    <view></view>
     <view>
         <text class="titleLi">音频:</text>
         <audio class="audio" id="myAudio" loop="true" controls="true" poster="{{audioPoster}}" src="{{audioSrc}}" name="此时此刻" author="许巍" bindplay="audioplay" bindpause="audiopause"></audio>
