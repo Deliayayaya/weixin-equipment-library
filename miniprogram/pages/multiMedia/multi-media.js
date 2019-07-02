@@ -167,6 +167,8 @@ Page({
     this.mapCtx = wx.createMapContext('myMap');
     this.options.markers = [];
     this.getNickName();
+    console.log("util", util)
+    // util.Fun();
   },
 
   /**

@@ -25,6 +25,9 @@ Page({
       case 'device':
         wx.navigateTo({ url: '../device/device' });
         break;
+      case 'lazyLoader':
+        wx.navigateTo({ url: '../lazyLoader/lazyLoader' });
+        break;
       default:
         wx.navigateTo({
           url: 'https://www.baidu.com',
@@ -74,9 +77,7 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function() {
-
-  },
+  onShow: function() {},
   onPullDownRefresh() { //下拉刷新
     util.showToast({ title: '加载中...', icon: 'loading', duration: 1000 });
     setTimeout(function() {
