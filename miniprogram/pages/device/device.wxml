@@ -19,12 +19,22 @@
         <view class="info">加速计z:{{z}}</view>
         <button type="primary" bindtap="jiasuji" plain>获取加速计</button>
     </view>
+
     <view class="row">
         <view class="info">罗盘:{{compass}}</view>
         <button type="primary" bindtap="luopan" plain>罗盘</button>
+        <input class="info" placeholder="请输入要拨打的号码" bindinput="inputNumber"></input>
+        <button type="primary" bindtap="callNumber" plain>拨打号码</button>
     </view>
     <view class="row">
-        <view class="info">罗盘:{{compass}}</view>
-        <button type="primary" bindtap="luopan" plain>罗盘</button>
+        <view>扫码的内容:{{scanResult}}</view>
+        <view>扫码的类型:{{scanType}}</view>
+        <view>扫码的字符集:{{scanCharset}}</view>
+        <view>扫码路径:{{scanPath}}</view>
+        <button type="primary" bindtap="scanCode" >扫码</button>
+    </view>
+    <view class="row">
+        <view>{{content}}</view>
+        <button type="primary" bindtap="copyContent">复制粘贴板内容</button>
     </view>
 </view>

@@ -1,0 +1,7 @@
+/* pages/lazyLoader/lazyLoader.wxss */
+.img-contain{
+    margin-bottom:20rpx;
+}
+.img-title{
+    text-align:center;
+}

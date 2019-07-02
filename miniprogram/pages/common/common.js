@@ -49,9 +49,14 @@
      }
    })
  }
+
+ function Fun() {
+   console.log("aaaaa方法");
+ }
  module.exports = {
    showToast: showToast,
    showModal: showModal,
    showLoading: showLoading,
-   showActionSheet: showActionSheet
+   showActionSheet: showActionSheet,
+   Fun: Fun
  }
