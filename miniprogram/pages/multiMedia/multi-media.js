@@ -8,6 +8,8 @@ Page({
    * 页面的初始数据
    */
   data: {
+    //图片
+    imgData:[{name:'图片来源',index:'0',item:['相册','相机','相机或相册']},{name:'图片质量',index:0,item:['原图','压缩图','原图或压缩图']},{name:'图片张数限制',index:0,item:['1','2','3','4','5','6','7','8','9']}],
     //音频
     audioPoster: 'http://y.gtimg.cn/music/photo_new/T002R300x300M000003rsKF44GyaSk.jpg?max_age=2592000',
     audioSrc: 'http://ws.stream.qqmusic.qq.com/M500001VfvsJ21xFqb.mp3?guid=ffffffff82def4af4b12b3cd9337d5e7&uin=346897220&vkey=6292F51E1E384E06DCBDC9AB7C49FD713D632D313AC4858BACB8DDD29067D3C601481D36E62053BF8DFEAF74C0A5CCFADD6471160CAF3E6A&fromtag=46',
@@ -20,7 +22,30 @@ Page({
     polygons: [],
     nikeName: '',
     avatarUrl: '',
-    selectedMarker: ''
+    selectedMarker: '',
+    selectedImg:[],
+    imgIndex:0,
+  },
+  /*图片处理*/
+  selectChange(e){
+     // var i = e.target.dataset.mark;
+    this.setData({
+      imgIndex:e.target.dataset.mark
+    })
+    this.data.imgData[this.data.imgIndex].index = e.detail.value;
+    this.setData({
+      imgData:this.data.imgData
+    })
+  },
+  chooseImage(){
+    console.log("iii",this.data.imgData[2].index,this.data.imgData[1].index,this.data.imgData[0].index)
+    wx.chooseImage({
+      count:this.data.imgData[2].index,
+      sizeType:this.data.imgData[1].index,
+      sourceType:this.data.imgData[0].index,
+      success(res){
+      console.log('res==',res);
+    }})
   },
   /*音频处理事件*/
   audioplay() {

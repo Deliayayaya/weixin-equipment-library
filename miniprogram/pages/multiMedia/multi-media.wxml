@@ -1,5 +1,26 @@
 <!--pages/duomeiti/audio.wxml-->
 <view>
+  <view>
+        <text class="titleLi">选择图片</text>
+        
+        <view>
+            <view class='img-view' wx:for="{{imgData}}" wx:key="*this" wx:for-item="each" wx:for-index="i">
+              <picker data-mark="{{i}}" value="{{each.i}}" mode="selector"  range="{{each.item}}" bindchange="selectChange">
+                <view>{{each.name}}: {{each.item[each.index]}}</view>
+              </picker>
+            </view>
+            <view>
+              <view>选择:</view>
+              <view class="choose-img" bindtap="chooseImage">
+                <image src="../../images/加号.png"></image>
+              </view>
+              <view>
+                <image src="{{selectedImg}}"></image>
+              </view>
+            </view>
+        </view>
+
+    </view>
     <view>
         <text class="titleLi">音频:</text>
         <audio class="audio" id="myAudio" loop="true" controls="true" poster="{{audioPoster}}" src="{{audioSrc}}" name="此时此刻" author="许巍" bindplay="audioplay" bindpause="audiopause"></audio>

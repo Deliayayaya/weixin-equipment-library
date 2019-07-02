@@ -2,6 +2,17 @@
 .titleLi{
     color:blue
 }
+/*图片样式*/
+.choose-img{
+	width:200rpx;
+	height: 200rpx;
+	border:2rpx solid silver;
+	padding:20rpx;
+}
+.choose-img image{
+	width:200rpx;
+	height: 200rpx;
+}
 /*视频样式*/
 #myVideo{
     width:100%;

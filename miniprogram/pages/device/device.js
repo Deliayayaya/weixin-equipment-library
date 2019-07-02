@@ -1,5 +1,7 @@
 // pages/device/device.js
 var util = require('../common/common.js');
+var thecell = require('../common/thecell.js');
+console.log("thecell",thecell);
 Page({
 
   /**
@@ -80,7 +82,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-
+    thecell.init();
   },
 
   /**
