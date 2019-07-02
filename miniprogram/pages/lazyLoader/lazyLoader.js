@@ -26,17 +26,20 @@ Page({
     ]
   },
   onLoad(options) {
-    // const obs = wx.createIntersectionObserver(this);
-    // obs.relativeTo('.contain').observe('.img', function(res) {
-    //   console.log("rres", res);
-    // })
-    // const obs = wx.createIntersectionObserver(this);
-    // obs.relativeToViewport({ bottom: 100 }).observe('.img-contain', res => {
-    //   console.log("res", res)
-    // });
-    // var imgs = document.querySelectorAll('.img-contain');
-    // console.log("imgs", imgs);
-
+    var _self = this;
+    var obs = wx.createIntersectionObserver(this,{observeAll:true});
+    obs.relativeToViewport({bottom:0}).observe('.img',function(res){
+        _self.data.imgArr.forEach(function(item){
+          if(res.dataset.src == item.realSrc){
+            if(res.intersectionRatio > 0){
+              item.src = res.dataset.src;
+            }else{
+                item.src = '../../images/timg.gif';
+              }
+            _self.setData({imgArr:_self.data.imgArr});
+          }
+        })
+    })
   },
   /**
    * 组件的方法列表

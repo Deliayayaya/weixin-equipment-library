@@ -1,8 +1,6 @@
 <!--pages/lazyLoader/lazyLoader.wxml-->
 <view >
-    <!-- <view class="contain">
-        <image class="img" src="../../images/timg.gif" data-src="../../images/1.jpg"></image>
-    </view> -->
+    <view>懒加载示例</view>
     <view class="img-contain"  wx:for="{{imgArr}}" wx:key="*this" wx:for-item="item" wx:for-index="index">
         <image class="img" src="{{item.src}}" data-src="{{item.realSrc}}"></image>
          <view class="img-title">{{item.title}}</view>
